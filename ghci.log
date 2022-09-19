@@ -1,0 +1,9 @@
+GHCi, version 8.10.7: https://www.haskell.org/ghc/  :? for help
+Loaded GHCi configuration from /home/airi/cs2022/.ghci
+2022-09-19 22:12:25.203742081
+>>> q
+
+<interactive>:1:1: error: Variable not in scope: q
+2022-09-19 22:13:18.655543453
+>>> :q
+Leaving GHCi.
