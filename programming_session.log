@@ -512,3 +512,356 @@ Ok, one module loaded.
 [?1h=>>> :q
 [?1l>Leaving GHCi.
 ]0;airi@airi: ~/cs2022[01;32mairi@airi[00m:[01;34m~/cs2022[00m$ git add .
+]0;airi@airi: ~/cs2022[01;32mairi@airi[00m:[01;34m~/cs2022[00m$ git commit -m "start algo"
+[main 5f32a38] start algo
+ 5 files changed, 542 insertions(+), 1 deletion(-)
+ create mode 100644 ghci.hist
+ create mode 100644 ghci.log
+ create mode 100644 src/TemplateAlgo.hs
+ create mode 100644 stack.yaml.lock
+]0;airi@airi: ~/cs2022[01;32mairi@airi[00m:[01;34m~/cs2022[00m$ git push
+Enumerating objects: 11, done.
+Counting objects:   9% (1/11)Counting objects:  18% (2/11)Counting objects:  27% (3/11)Counting objects:  36% (4/11)Counting objects:  45% (5/11)Counting objects:  54% (6/11)Counting objects:  63% (7/11)Counting objects:  72% (8/11)Counting objects:  81% (9/11)Counting objects:  90% (10/11)Counting objects: 100% (11/11)Counting objects: 100% (11/11), done.
+Delta compression using up to 8 threads
+Compressing objects:  14% (1/7)Compressing objects:  28% (2/7)Compressing objects:  42% (3/7)Compressing objects:  57% (4/7)Compressing objects:  71% (5/7)Compressing objects:  85% (6/7)Compressing objects: 100% (7/7)Compressing objects: 100% (7/7), done.
+Writing objects:  12% (1/8)Writing objects:  25% (2/8)Writing objects:  37% (3/8)Writing objects:  50% (4/8)Writing objects:  62% (5/8)Writing objects:  75% (6/8)Writing objects:  87% (7/8)Writing objects: 100% (8/8)Writing objects: 100% (8/8), 8.24 KiB | 2.06 MiB/s, done.
+Total 8 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/1)[Kremote: Resolving deltas: 100% (1/1)[Kremote: Resolving deltas: 100% (1/1), completed with 1 local object.[K
+To github.com:airiruru/cs2022
+   8c0117f..5f32a38  main -> main
+]0;airi@airi: ~/cs2022[01;32mairi@airi[00m:[01;34m~/cs2022[00m$ Script started on 2022-09-26 20:21:32+09:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="80" LINES="16"]
+]0;airi@airi: ~/cs2022[01;32mairi@airi[00m:[01;34m~/cs2022[00m$ cat 'which lghci'[K`[1P[1@`[C[C[C[C[C[C[C[C[C[C[C[C
+#!/bin/bash
+ginput | tee -a -i ghci.log | stack exec -- ghci 2>&1 | tee -a -i ghci.log
+]0;airi@airi: ~/cs2022[01;32mairi@airi[00m:[01;34m~/cs2022[00m$ cof[Kde ~?[K/.local/bin
+]0;airi@airi: ~/cs2022[01;32mairi@airi[00m:[01;34m~/cs2022[00m$ lghci src/TemplateAlgo.hs
+GHCi, version 8.10.7: https://www.haskell.org/ghc/  :? for help
+Loaded GHCi configuration from /home/airi/cs2022/.ghci
+target ‘s1’ is not a module name or a source file
+2022-09-26 20:41:06.894466598
+[?1h=>>> Script started on 2022-09-26 20:43:11+09:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="80" LINES="16"]
+]0;airi@airi: ~/cs2022[01;32mairi@airi[00m:[01;34m~/cs2022[00m$ cat `which lghci`
+#!/bin/bash
+
+stack exec -- ghci s1
+]0;airi@airi: ~/cs2022[01;32mairi@airi[00m:[01;34m~/cs2022[00m$ Script started on 2022-09-26 20:44:18+09:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="80" LINES="16"]
+]0;airi@airi: ~/cs2022[01;32mairi@airi[00m:[01;34m~/cs2022[00m$ csa[K[Kat `which lghci`
+#!/bin/bash
+
+stack exec -- ghci 
+]0;airi@airi: ~/cs2022[01;32mairi@airi[00m:[01;34m~/cs2022[00m$ Script started on 2022-09-26 20:45:45+09:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="80" LINES="16"]
+]0;airi@airi: ~/cs2022[01;32mairi@airi[00m:[01;34m~/cs2022[00m$ cat `which lghci`
+#!/bin/bash
+
+stack exec -- ghci 
+]0;airi@airi: ~/cs2022[01;32mairi@airi[00m:[01;34m~/cs2022[00m$ Script started on 2022-09-26 20:46:58+09:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="80" LINES="16"]
+]0;airi@airi: ~/cs2022[01;32mairi@airi[00m:[01;34m~/cs2022[00m$ cat `which lghci`
+#!/bin/bash
+
+stack exec -- ghci 
+]0;airi@airi: ~/cs2022[01;32mairi@airi[00m:[01;34m~/cs2022[00m$ cp[Kode =[K~/.local/bin
+]0;airi@airi: ~/cs2022[01;32mairi@airi[00m:[01;34m~/cs2022[00m$ lghci src/TemplateAlgo.hs
+GHCi, version 8.10.7: https://www.haskell.org/ghc/  :? for help
+Loaded GHCi configuration from /home/airi/cs2022/.ghci
+[1 of 1] Compiling TemplateAlgo     ( src/TemplateAlgo.hs, interpreted )
+Ok, one module loaded.
+2022-09-26 21:29:36.893761068
+[?1h=>>> words "This is a pen."
+[?1l>["This","is","a","pen."]
+2022-09-26 21:37:47.113125949
+[?1h=>>> main [K[K[K[K[K:r
+[?1l>   1  module TemplateAlgo where
+   2  
+   3  main :: IO ()
+   4  main = interact func
+   5  
+   6  func :: String -> String
+   7  func input = case map (map readInt . words) (lines input) of
+   8      _ -> undefined
+   9  
+  10  readInt :: String -> Int
+  11  readInt =read
+Ok, one module loaded.
+2022-09-26 22:06:13.975433039
+[?1h=>>> :l app/Main.hs
+[?1l>   1    module Main where
+   2    
+   3    main :: IO ()
+   4    main = imteract func
+   5    
+   6    func :: String -> String
+   7    func input = unlines (map show [1 .. 3])
+   8    
+   9    showInt :: Int -> String
+  10    showInt = show
+[1 of 1] Compiling Main             ( app/Main.hs, interpreted )
+
+[;1mapp/Main.hs:4:8: [;1m[31merror:[0m[0m[;1m[0m[0m[;1m
+    • Variable not in scope: imteract :: (String -> String) -> IO ()
+    • Perhaps you meant ‘interact’ (imported from Prelude)[0m[0m
+[;1m[34m  |[0m[0m
+[;1m[34m4 |[0m[0m main = [;1m[31mimteract[0m[0m func
+[;1m[34m  |[0m[0m[;1m[31m        ^^^^^^^^[0m[0m
+[0m[0m[0mFailed, no modules loaded.
+2022-09-26 22:07:45.929234119
+[?1h=>>> [4DDisplay all 854 possibilities? (y or n)
+!!
+$
+$!
+&&
+*
+**
+*>
++
+++
+-
+.
+/
+/=
+<
+<$
+Display all 854 possibilities? (y or n)[39D----More----[K[12D[K<$>
+----More----[12D[K<*
+----More----[12D[K<*>
+----More----[12D[K<=
+----More----[12D[K<>
+----More----[12D[K=<<
+----More----[12D[K==
+----More----[12D[K>
+----More----[12D[K>=
+----More----[12D[K>>
+----More----[12D[K>>=
+----More----[12D[KApplicative
+----More----[12D[KBool
+----More----[12D[KBounded
+----More----[12D[KCalendarDiffDays
+----More----[12D[KCalendarDiffTime
+----More----[12D[KChar
+----More----[12D[KData.Time.CalendarDiffDays
+----More----[12D[KData.Time.CalendarDiffTime
+----More----[12D[KData.Time.Day
+----More--------More--------More----Script started on 2022-09-26 22:10:24+09:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="80" LINES="16"]
+]0;airi@airi: ~/cs2022[01;32mairi@airi[00m:[01;34m~/cs2022[00m$ cat `which lghci`
+#!/bin/bash
+
+stack exec -- ghci  $1
+]0;airi@airi: ~/cs2022[01;32mairi@airi[00m:[01;34m~/cs2022[00m$ code ~/.local/bin
+]0;airi@airi: ~/cs2022[01;32mairi@airi[00m:[01;34m~/cs2022[00m$ [K]0;airi@airi: ~/cs2022[01;32mairi@airi[00m:[01;34m~/cs2022[00m$ Script started on 2022-09-26 22:11:42+09:00 [TERM="xterm-256color" TTY="/dev/pts/5" COLUMNS="63" LINES="16"]
+]0;airi@airi: ~/cs2022[01;32mairi@airi[00m:[01;34m~/cs2022[00m$ cat `which lghci`
+#!/bin/bash
+
+stack exec -- ghci  $1
+]0;airi@airi: ~/cs2022[01;32mairi@airi[00m:[01;34m~/cs2022[00m$ code =[K~/.local/bin
+]0;airi@airi: ~/cs2022[01;32mairi@airi[00m:[01;34m~/cs2022[00m$ lghci src/Temple[KateAlgo.hs
+GHCi, version 8.10.7: https://www.haskell.org/ghc/  :? for help
+Loaded GHCi configuration from /home/airi/cs2022/.ghci
+[1 of 1] Compiling TemplateAlgo     ( src/TemplateAlgo.hs, interpreted )
+Ok, one module loaded.
+2022-09-26 22:13:13.622371016
+[?1h=>>> words "This is a pen "
+[?1l>["This","is","a","pen"]
+2022-09-26 22:13:40.911074172
+[?1h=>>> :r
+[?1l>   1  module TemplateAlgo where
+   2  
+   3  main :: IO ()
+   4  main = interact func
+   5  
+   6  func :: String -> String
+   7  func input = case map (map readInt . words) (lines input) of
+   8      _ -> undefined
+   9  
+  10  readInt :: String -> Int
+  11  readInt =read
+Ok, one module loaded.
+2022-09-26 22:13:52.798076237
+[?1h=>>> :l app/Main.hs
+[?1l>   1    module Main where
+   2    
+   3    main :: IO ()
+   4    main = interact func
+   5    
+   6    func :: String -> String
+   7    func input = unlines (map show [1 .. 3])
+   8    
+   9    showInt :: Int -> String
+  10    showInt = show
+[1 of 1] Compiling Main             ( app/Main.hs, interpreted )
+Ok, one module loaded.
+2022-09-26 22:14:13.245568583
+[?1h=>>> main
+[?1l>1
+2
+3
+2022-09-26 22:14:51.102999186
+[?1h=>>> 
+[?1l><stdin>: hGetChar: illegal operation (handle is semi-closed)
+]0;airi@airi: ~/cs2022[01;32mairi@airi[00m:[01;34m~/cs2022[00m$ Script started on 2022-10-03 11:04:19+09:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="116" LINES="16"]
+]0;airi@airi: ~/cs2022[01;32mairi@airi[00m:[01;34m~/cs2022[00m$ Script started on 2022-10-03 19:45:49+09:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="109" LINES="16"]
+]0;airi@airi: ~/cs2022[01;32mairi@airi[00m:[01;34m~/cs2022[00m$ cat `which lghci`
+#!/bin/bash
+
+stack exec -- ghci  $1
+]0;airi@airi: ~/cs2022[01;32mairi@airi[00m:[01;34m~/cs2022[00m$ lghci app [K/Main.hs
+GHCi, version 8.10.7: https://www.haskell.org/ghc/  :? for help
+Loaded GHCi configuration from /home/airi/cs2022/.ghci
+[1 of 1] Compiling Main             ( app/Main.hs, interpreted )
+Ok, one module loaded.
+2022-10-03 19:46:53.700025126
+[?1h=>>> 27182 `mod`818
+[?1l>188
+2022-10-03 19:53:17.397559617
+[?1h=>>> :r
+[?1l>   1  module Main where
+   2  
+   3  showInt :: Int -> String
+   4  showInt = show
+   5  
+   6  readInt :: String -> Int
+   7  readInt = read
+   8  
+   9  main :: IO ()
+  10  main = interact func
+  11  
+  12  
+  13  -- func :: String -> String
+  14  -- func input = unlines ["Hello Algo-method!"]
+  15  
+  16  -- func :: String -> String
+  17  -- func input = unlines (map showInt [1 .. 3])
+  18  
+  19  func :: String -> String
+  20  func input = 27182 `mod`818
+[1 of 1] Compiling Main             ( app/Main.hs, interpreted )
+
+[;1mapp/Main.hs:20:14: [;1m[31merror:[0m[0m[;1m[0m[0m[;1m
+    • No instance for (Num String) arising from the literal ‘27182’
+    • In the first argument of ‘mod’, namely ‘27182’
+      In the expression: 27182 `mod` 818
+      In an equation for ‘func’: func input = 27182 `mod` 818[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m20 |[0m[0m func input = [;1m[31m27182[0m[0m `mod`818
+[;1m[34m   |[0m[0m[;1m[31m              ^^^^^[0m[0m
+[0m[0m[0m
+[;1mapp/Main.hs:20:14: [;1m[31merror:[0m[0m[;1m[0m[0m[;1m
+    • No instance for (Integral String) arising from a use of ‘mod’
+    • In the expression: 27182 `mod` 818
+      In an equation for ‘func’: func input = 27182 `mod` 818[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m20 |[0m[0m func input = [;1m[31m27182 `mod`818[0m[0m
+[;1m[34m   |[0m[0m[;1m[31m              ^^^^^^^^^^^^^^[0m[0m
+[0m[0m[0mFailed, no modules loaded.
+2022-10-03 19:56:04.218689272
+[?1h=>>> :r
+[?1l>   1  module Main where
+   2  
+   3  showInt :: Int -> String
+   4  showInt = show
+   5  
+   6  readInt :: String -> Int
+   7  readInt = read
+   8  
+   9  main :: IO ()
+  10  main = interact func
+  11  
+  12  -- func :: String -> String
+  13  -- func input = unlines ["Hello Algo-method!"]
+  14  
+  15  -- func :: String -> String
+  16  -- func input = unlines (map showInt [1 .. 3])
+  17  
+  18  func :: String -> String
+  19  func input = showInt (27182 `mod`818)
+[1 of 1] Compiling Main             ( app/Main.hs, interpreted )
+Ok, one module loaded.
+2022-10-03 20:01:43.832540925
+[?1h=>>> :r
+[?1l>   1  module Main where
+   2  
+   3  showInt :: Int -> String
+   4  showInt = show
+   5  
+   6  readInt :: String -> Int
+   7  readInt = read
+   8  
+   9  main :: IO ()
+  10  main = interact func
+  11  
+  12  -- func :: String -> String
+  13  -- func input = unlines ["Hello Algo-method!"]
+  14  
+  15  -- func :: String -> String
+  16  -- func input = unlines (map showInt [1 .. 3])
+  17  
+  18  -- func :: String -> String
+  19  -- func input = showInt (27182 `mod`818)
+  20  
+  21  func :: String -> String
+  22  func input = showInt (314 * (159 + 265) − 358)
+[1 of 1] Compiling Main             ( app/Main.hs, interpreted )
+
+[;1mapp/Main.hs:22:41: [;1m[31merror:[0m[0m[;1m[0m[0m[;1m
+    Variable not in scope: (−) :: t0 -> t1 -> Int[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m22 |[0m[0m func input = showInt (314 * (159 + 265) [;1m[31m−[0m[0m 358)
+[;1m[34m   |[0m[0m[;1m[31m                                         ^[0m[0m
+[0m[0m[0mFailed, no modules loaded.
+2022-10-03 20:08:24.484841052
+[?1h=>>> :r
+[?1l>   1  module Main where
+   2  
+   3  showInt :: Int -> String
+   4  showInt = show
+   5  
+   6  readInt :: String -> Int
+   7  readInt = read
+   8  
+   9  main :: IO ()
+  10  main = interact func
+  11  
+  12  -- func :: String -> String
+  13  -- func input = unlines ["Hello Algo-method!"]
+  14  
+  15  -- func :: String -> String
+  16  -- func input = unlines (map showInt [1 .. 3])
+  17  
+  18  -- func :: String -> String
+  19  -- func input = showInt (27182 `mod`818)
+  20  
+  21  func :: String -> String
+  22  func input = showInt (314 * (159 + 265) - 358)
+[1 of 1] Compiling Main             ( app/Main.hs, interpreted )
+Ok, one module loaded.
+2022-10-03 20:08:56.309036426
+[?1h=>>> :r
+[?1l>   1  module Main where
+   2  
+   3  showInt :: Int -> String
+   4  showInt = show
+   5  
+   6  readInt :: String -> Int
+   7  readInt = read
+   8  
+   9  main :: IO ()
+  10  main = interact func
+  11  
+  12  -- func :: String -> String
+  13  -- func input = unlines ["Hello Algo-method!"]
+  14  
+  15  -- func :: String -> String
+  16  -- func input = unlines (map showInt [1 .. 3])
+  17  
+  18  -- func :: String -> String
+  19  -- func input = showInt (27182 `mod`818)
+  20  
+  21  -- func :: String -> String
+  22  -- func input = showInt (314 * (159 + 265) - 358)
+  23  
+  24  func :: String -> String
+  25  func input = showInt (24 * 60 * 60)
+[1 of 1] Compiling Main             ( app/Main.hs, interpreted )
+Ok, one module loaded.
+2022-10-03 20:13:28.039754947
+[?1h=>>> :q
+[?1l>Leaving GHCi.
+]0;airi@airi: ~/cs2022[01;32mairi@airi[00m:[01;34m~/cs2022[00m$ git add .
